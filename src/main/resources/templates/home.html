@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Find the perfect job that matches your skills and aspirations.">
+<meta name="keywords"
+	content="job portal, job search, employment, career, hiring">
+<link rel="icon" href="/assets/favicon.png">
+<title>Job Portal</title>
+<style>
+:root {
+	--primary-color: #1a73e8;
+	--secondary-color: #34a853;
+	--accent-color: #fbbc05;
+	--text-light: #ffffff;
+	--text-dark: #202124;
+	--background-light: #f8f9fa;
+	--border-color: #dadce0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	line-height: 1.6;
+	background-color: var(--background-light);
+}
+
+.navbar {
+	background-color: #202428;
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--text-light);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.logo a {
+	font-size: 1.8rem;
+	font-weight: bold;
+	background: linear-gradient(90deg, #3027ae, #219a52);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.logo {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.logo a {
+	color: var(--text-light);
+	text-decoration: none;
+}
+
+.nav-buttons {
+	display: flex;
+	gap: 1rem;
+}
+
+.nav-btn {
+	padding: 0.5rem 1.5rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	color: var(--text-light);
+	background-color: transparent;
+	border: 2px solid var(--text-light);
+	transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+	background-color: var(--secondary-color);
+	color: var(--text-light);
+}
+
+.hero-section {
+	min-height: 90vh;
+	background: linear-gradient(rgb(128 115 115/ 80%), rgb(1 6 14/ 80%)),
+		url(https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: var(--text-light);
+	padding: 2rem 1rem;
+}
+
+.hero-title {
+	font-size: clamp(2.5rem, 5vw, 4rem);
+	margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+	font-size: clamp(1.2rem, 2vw, 1.5rem);
+	margin-bottom: 2rem;
+	max-width: 700px;
+}
+
+.search-box {
+	background: var(--text-light);
+	padding: 1rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+	max-width: 700px;
+}
+
+.search-input {
+	flex: 1;
+	padding: 0.8rem;
+	border: 1px solid var(--border-color);
+	border-radius: 4px;
+	font-size: 1rem;
+}
+
+.search-btn {
+	padding: 0.8rem 2rem;
+	background-color: var(--secondary-color);
+	color: var(--text-light);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-size: 1rem;
+}
+
+.search-btn:hover {
+	background-color: #2e7d32;
+}
+
+.features {
+	padding: 4rem 2rem;
+	text-align: center;
+}
+
+.features h2 {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	color: var(--text-dark);
+}
+
+.features-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.feature-item {
+	background: var(--text-light);
+	padding: 1.5rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item h3 {
+	font-size: 1.5rem;
+	color: var(--text-dark);
+	margin-bottom: 1rem;
+}
+
+.feature-item p {
+	color: var(--text-dark);
+	font-size: 1rem;
+}
+
+.footer {
+	background-color: #202428;
+	color: var(--text-light);
+	padding: 0.5rem;
+	text-align: center;
+	/* margin-top: 2rem; */
+}
+
+.footer-links {
+	margin-bottom: 1rem;
+}
+
+.footer-links a {
+	color: var(--text-light);
+	text-decoration: none;
+	margin: 0 1rem;
+	transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+	color: var(--accent-color);
+}
+
+.footer-text {
+	font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+	<nav class="navbar">
+		<div class="logo">
+			<a href="/">JobPortal</a>
+		</div>
+		<div class="nav-buttons">
+			<a href="/login"><button class="nav-btn">Login</button></a> <a
+				href="/jobseeker/register"><button class="nav-btn">Register</button></a>
+		</div>
+	</nav>
+
+	<main>
+		<section class="hero-section">
+			<h1 class="hero-title">Find Your Dream Job</h1>
+			<p class="hero-subtitle">Search thousands of job listings to
+				kickstart your career. Your future is waiting!</p>
+			<form action="/search-jobs" method="post">
+				<div class="search-box">
+					<input type="text" class="search-input" name="query"
+						placeholder="Search jobs..." required style="width: 400px; height: 45px;">
+					<button type="submit" class="search-btn">
+						<i class="fas fa-search"></i> Search
+					</button>
+				</div>
+			</form>
+		</section>
+
+		
+	</main>
+
+	<footer class="footer">
+		<div class="footer-links">
+		    <a href="/">Home</a>
+			<a href="/about-us">About Us</a> 
+			<a href="/contact">Contact</a> 
+			<a href="/privacy-policy">Privacy Policy</a> 
+			<a href="/terms">Terms of Service</a>
+		</div>
+		<p class="footer-text">© 2024 JobPortal. All rights reserved.</p>
+	</footer>
+</body>
+
+</html>

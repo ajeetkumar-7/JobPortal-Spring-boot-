@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Portal - Register</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    .logo a {
+        font-size: 1.8rem;
+        font-weight: bold;
+        background: linear-gradient(90deg, #3027ae, #219a52);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border: 2px solid transparent;
+    }
+
+    .navbar {
+        background-color: #202428;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+           
+    }
+
+    .logo a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+.register-box {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 550px;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+        border: 3px solid #3027ae;
+        margin: 20px auto;
+    }
+
+    .register-box h2 {
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-size: 1.8rem;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #3027ae;
+    }
+
+    .register-box input {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 2px solid #bdc3c7;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .register-box input:focus {
+        border-color: #3027ae;
+        outline: none;
+        box-shadow: 0 0 5px rgba(48, 39, 174, 0.3);
+    }
+
+    .register-box label {
+        display: block;
+        margin-bottom: 6px;
+        color: #2c3e50;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+    .register-box .error {
+        color: #e74c3c;
+        font-size: 0.85rem;
+        margin-top: 4px;
+    }
+
+    .register-box button {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(90deg, #3027ae, #219a52);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 15px;
+    }
+
+    .register-box button:hover {
+        background: linear-gradient(90deg, #219a52, #3027ae);
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+        .register-box {
+            margin: 10px;
+            padding: 1.5rem;
+        }
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        padding: 8px 15px;
+        border: 2px solid #eae9ef;
+        border-radius: 5px;
+    }
+
+    .nav-links a:hover {
+        color: #3498db;
+        border-color: #3498db;
+        background-color: rgba(52, 152, 219, 0.1);
+    }
+
+    .register-container {
+        min-height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .register-form {
+        background: white;
+        padding: 2rem;
+        margin-top: 4rem;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border: 3px solid #3027ae;
+    }
+
+    .register-form h1 {
+        color: #2c3e50;
+        margin-bottom: 2rem;
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #3027ae;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #2c3e50;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 0.8rem;
+        border: 2px solid #bdc3c7;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus {
+        border-color: #3027ae;
+        outline: none;
+    }
+
+    .error-message {
+        color: #e74c3c;
+        font-size: 0.9rem;
+        margin-top: 0.3rem;
+    }
+
+    .register-btn {
+        width: 100%;
+        padding: 1rem;
+        background-color: #3027ae;
+        color: white;
+        border: 2px solid #e0e0e9;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .register-btn:hover {
+        background-color: #219a52;
+        border-color: #219a52;
+    }
+
+    .footer {
+        background-color: #212025;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .register-container {
+            padding: 1rem;
+        }
+
+        .register-form {
+            padding: 1.5rem;
+        }
+
+        .nav-links {
+            display: none;
+        }
+    }
+</style></head>
+<body>
+   <nav class="navbar">
+       <div class="logo"><a href="/">JobPortal</a></div>
+       <div class="nav-links">
+           <a href="/login">Login</a>
+           <a href="/jobseeker/register">Register</a>
+       </div>
+   </nav>
+
+   <div class="register-container">
+       <div class="register-form">
+           <h1>Job Seeker Register</h1>
+           <form action="/jobseeker/register" method="post" th:object="${jobSeeker}">
+               <div class="form-group">
+                   <label for="name">Name</label>
+                   <input type="text" id="name" th:field="*{name}">
+                   <span class="error-message" th:errors="*{name}"></span>
+               </div>
+
+               <div class="form-group">
+                   <label for="email">Email</label>
+                   <input type="email" id="email" th:field="*{email}">
+                   <span class="error-message" th:errors="*{email}"></span>
+               </div>
+
+               <div class="form-group">
+                   <label for="mobile">Mobile</label>
+                   <input type="tel" id="mobile" th:field="*{mobile}">
+                   <span class="error-message" th:errors="*{mobile}"></span>
+               </div>
+
+               <div class="form-group">
+                   <label for="password">Password</label>
+                   <input type="password" id="password" th:field="*{password}">
+                   <span class="error-message" th:errors="*{password}"></span>
+               </div>
+
+               <div class="form-group">
+                   <label for="confirmPassword">Confirm Password</label>
+                   <input type="password" id="confirmPassword" th:field="*{confirmPassword}">
+                   <span class="error-message" th:errors="*{confirmPassword}"></span>
+               </div>
+
+               <button class="register-btn">Register</button>
+           </form><br>
+             <p style="font-weight: bold;">Are you a Recruiter? Click <a href="/recruiter/register">here</a> to Register</p>
+       </div>
+   </div>
+
+   <footer class="footer">
+       <p>© 2023 JobPortal. All rights reserved.</p>
+   </footer>
+</body>
+</html>
